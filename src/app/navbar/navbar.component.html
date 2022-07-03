@@ -1,0 +1,16 @@
+<div class="navbar-wrapper">
+    <div class="logo-container">
+        <img src="../../../assets/img/FlowAppLogo.jpg" alt="">
+    </div>
+    <div>
+        <ng-container *ngIf="!isAuthenticated()">
+            <button (click)="logout()" type="button" class="button-log btn btn-light px-5 ">LogIn</button>
+        </ng-container>
+    </div>
+    <div>
+        <ng-container *ngIf="isAuthenticated()">
+            <button (click)="logout()" type="button" class="button-log btn btn-light px-5">Logout</button>
+        </ng-container>
+    </div>
+    
+</div>

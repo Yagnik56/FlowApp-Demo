@@ -1,0 +1,12 @@
+.navbar-wrapper {
+    padding: 10px;
+    background-color: #A901B0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.button-log{
+    position:relative;
+    margin-left: 1125px;
+}
