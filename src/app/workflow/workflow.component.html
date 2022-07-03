@@ -1,0 +1,40 @@
+<!-- <app-header ></app-header> -->
+<app-header 
+  (filterType)="filterWorkFlows($event)"
+  (searchName)="searchWorkFlow($event)"
+></app-header>
+<div class="container">
+  <div class="row justify-content-center align-items-center gap-3">
+    <div 
+      class="card" 
+      style="width: 18rem;"
+      *ngFor="let flow of showWorkFlows">
+      <div class="card-body">
+        <h5 class="card-title" [routerLink]="['/nodes']"
+        [queryParams]="{ workFlowName: flow.name }"> {{ flow.name }}</h5>
+        <div class="data d-flex flex-row justify-content-between">
+          <h6 class="card-subtitle pt-2 text-muted">{{ flow.status }}</h6>
+          <div class="btn-container">
+          <button 
+              (click)="makeItPending(flow.name)"
+              *ngIf="flow.status === 'Completed'" 
+              type="button" 
+              class="btn btn-success btn-circle mx-2"><i class="fas fa-check"></i>
+          </button>
+          <button 
+              (click)="makeItComplete(flow.name)"
+              *ngIf="flow.status === 'Pending'" 
+              type="button" 
+              class="btn btn-secondary btn-circle mx-2"><i class="fas fa-check"></i>
+          </button>
+          <button 
+              (click)="removeIt(flow.name)"
+              type="button" 
+              class="btn btn-danger btn-circle"><i class="fas fa-trash"></i>
+          </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
