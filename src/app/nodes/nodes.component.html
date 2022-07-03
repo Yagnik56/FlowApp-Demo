@@ -1,0 +1,29 @@
+<app-nodes-header [workFlowName]="workFlowName"></app-nodes-header>
+<div class="horizontal-scrollable">
+    <div class="row d-flex p-5 gap-4">
+        <div class="card col-sm-2 p-2" *ngFor="let node of allNodesForWorkFlow">
+            <div class="card-body">
+                <input class="card-title border border-0" type="text" name="nodeName" id="node_{{ node.title }}" value="{{ node.title }}">
+                <textarea class="form-control my-2" id="content_{{ node.title }}" rows="10" value="{{ node.content }}"></textarea>
+                <div class="bottom-container">
+                    <button 
+                        *ngIf="node.status === 'Completed'"
+                        type="button" 
+                        class="btn btn-success btn-circle"><i class="fas fa-check"></i>
+                    </button>
+                    <button 
+                        *ngIf="node.status === 'In Progrss'"
+                        type="button" 
+                        class="btn btn-primary btn-circle"><i class="fas fa-check"></i>
+                    </button>
+                    <button 
+                        *ngIf="node.status === 'Pending'"
+                        type="button" 
+                        class="btn btn-secondary btn-circle"><i class="fas fa-check"></i>
+                    </button>
+                    <p class="fs-5 mt-2 pt-2 px-2">{{ node.status }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

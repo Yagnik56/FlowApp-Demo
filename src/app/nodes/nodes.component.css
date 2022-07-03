@@ -1,0 +1,28 @@
+#shuffleBtn {
+    --bs-btn-bg: rgb(112,15,78);
+}
+
+.horizontal-scrollable .row {
+    flex-wrap: nowrap;
+}
+
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    padding: 6px 0px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.42857;
+}
+
+.bottom-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-title{
+    width: auto;
+}
