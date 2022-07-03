@@ -1,0 +1,17 @@
+.registerbox{
+    margin: 130px auto ;
+    width: 500px;
+    background-color: white;
+    border: 1px;
+    border-radius: 5px;
+}
+
+.register-content{
+    padding: 30px;
+}
+
+.title{
+    text-align: center;
+    font-size: 2rem;
+    width: full;
+}
